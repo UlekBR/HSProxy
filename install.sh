@@ -23,6 +23,9 @@ else
     return
 fi
 
+curl -o "/opt/hsproxy/cert.pem" -f "https://github.com/UlekBR/HSProxy/main/cert.pem"
+curl -o "/opt/hsproxy/key.pem" -f "https://github.com/UlekBR/HSProxy/main/key.pem"
+
 chmod +x /opt/api/proxy
 chmod +x /opt/api/sslproxy
 chmod +x /opt/api/menu
