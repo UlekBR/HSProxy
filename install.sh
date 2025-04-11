@@ -26,10 +26,10 @@ fi
 curl -o "/opt/hsproxy/cert.pem" -f "https://github.com/UlekBR/HSProxy/blob/main/cert.pem"
 curl -o "/opt/hsproxy/key.pem" -f "https://github.com/UlekBR/HSProxy/blob/main/key.pem"
 
-chmod +x /opt/api/proxy
-chmod +x /opt/api/sslproxy
-chmod +x /opt/api/menu
+chmod +x /opt/hsproxy/proxy
+chmod +x /opt/hsproxy/sslproxy
+chmod +x /opt/hsproxy/menu
 
-ln -s /opt/api/menu.sh /usr/local/bin/hsproxy
+ln -s /opt/hsproxy/menu /usr/local/bin/hsproxy
 clear
 echo -e "Para iniciar o menu digite: hsproxy"
