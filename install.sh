@@ -4,8 +4,6 @@
 mkdir /opt
 mkdir /opt/hsproxy
 
-apt update -y && apt install curl -y
-
 arch=$(uname -m)
 
 if [[ $arch == "x86_64" || $arch == "amd64" || $arch == "x86_64h" ]]; then
