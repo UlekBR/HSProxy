@@ -6,6 +6,11 @@ mkdir /opt/hsproxy
 
 arch=$(uname -m)
 
+[ -f /opt/hsproxy/proxy ] && rm -f /opt/hsproxy/proxy
+[ -f /opt/hsproxy/sslproxy ] && rm -f /opt/hsproxy/sslproxy
+[ -f /opt/hsproxy/menu ] && rm -f /opt/hsproxy/menu
+
+
 if [[ $arch == "x86_64" || $arch == "amd64" || $arch == "x86_64h" ]]; then
     echo "Sistema baseado em x86_64 (64-bit Intel/AMD)"
     curl -o "/opt/hsproxy/proxy" -f "https://raw.githubusercontent.com/UlekBR/HSProxy/refs/heads/main/HSProxy_x64"
